@@ -86,9 +86,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.rqgor.pass_the_subject'
+    namespace 'com.anonymous.pass_the_subject'
     defaultConfig {
-        applicationId 'com.rqgor.pass_the_subject'
+        applicationId 'com.anonymous.pass_the_subject'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
