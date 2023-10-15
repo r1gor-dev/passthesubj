@@ -4,11 +4,13 @@ import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 import Lottie from "lottie-react-native";
 import {createRandomUser} from "../../utils/generate-dommy-data";
+import {PostContext} from "../../context/post-context";
 
 export default function TabOneScreen() {
-    const animationRef = React.useRef<Lottie>(null)
+  const animationRef = React.useRef<Lottie>(null)
+  const posts = React.useContext(PostContext)
   return (
-   <SafeAreaView style={{flex:1}}>
+   <SafeAreaView>
      <ScrollView
          contentContainerStyle={{
              paddingHorizontal: 10,
@@ -38,6 +40,8 @@ export default function TabOneScreen() {
            alert("Animation finished");
        }}*/
        />
+       {posts.map((post) => (<Text key={post.id}>{post.author.name}</Text>
+       ))}
      </ScrollView>
    </SafeAreaView>
   );

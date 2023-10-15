@@ -1,12 +1,23 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
     "strict": true,
+    "paths": {
+      "faker/*": [
+        "@faker-js/faker/*"
+      ],
+      "faker": [
+        "@faker-js/faker"
+      ]
+    }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+  ],
+  "esModuleInterop": true
 }

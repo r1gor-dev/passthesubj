@@ -57,3 +57,5 @@ export function createRandomPostPtS(): PostPtS {
 export function generatePostPtS(): PostPtS[] {
     return new Array(55).fill(0).map((_) => createRandomPostPtS());
 }
+
+// this is why I have my code mirrored @ gitea and GitLab and encrypted via GPG and hosted on UseNet with 33% parity.
